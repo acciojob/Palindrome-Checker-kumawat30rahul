@@ -1,15 +1,7 @@
 // complete the given function
 
 function palindrome(str){
-	let alpanumeric = ""
-	for (let i = 0; i < str.length; i++) {
-    let code = str.charCodeAt(i);
-    if ((code > 64 && code < 91) || // upper alpha (A-Z)
-        (code > 96 && code < 123)) { // lower alpha (a-z)
-        alphanumeric += str[i];
-    }
-}
-str = alphanumeric;
+	str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
 	if(str.length == 0){
 		return true
 	}else{
