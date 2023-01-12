@@ -1,7 +1,10 @@
 // complete the given function
 
 function palindrome(str){
-	let i = 0
+	if(str.length == 0){
+		return true
+	}else{
+		let i = 0
 	let j = str.length - 1
 	while(i<=j){
 		if(str[i] != str[j]){
@@ -12,5 +15,7 @@ function palindrome(str){
 		}
 	}
 	return true
+	}
+	
 }
 module.exports = palindrome
